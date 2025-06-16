@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Monedas de Nekotina</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ffb6c1;
+      text-shadow: 0 0 15px #ff66cc;
+      margin-bottom: 30px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff66cc; }
+      to { text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff66cc; }
+    }
+
+    .precio {
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #333;
+      padding: 15px 25px;
+      margin: 10px 0;
+      border-radius: 14px;
+      font-size: 18px;
+      width: fit-content;
+      box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .precio:hover {
+      transform: scale(1.1);
+      background-color: #ffe5f0;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: #ff85c1;
+      padding: 10px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #ff85c1;
+      transition: 0.3s ease;
+      color: white;
+    }
+
+    a:hover {
+      background-color: #ff66aa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="https://media.tenor.com/8Epk9kxljeQAAAPo/snow-gif-for-discord-banner.mp4" type="video/mp4">
+    Tu navegador no soporta video de fondo.
+  </video>
+
+  <div class="overlay">
+    <h1>🎀 Tienda de Monedas de Nekotina 🎀</h1>
+
+    <div class="precio">35.000 Monedas - $1.5 USD</div>
+    <div class="precio">46.000 Monedas - $2 USD</div>
+    <div class="precio">59.000 Monedas - $2.8 USD</div>
+    <div class="precio">72.000 Monedas - $2.8 USD</div>
+    <div class="precio">95.000 Monedas - $3 USD</div>
+    <div class="precio">160.000 Monedas - $5 USD</div>
+
+    <a href="index.html">← Volver al inicio</a>
+  </div>
+</body>
+</html>

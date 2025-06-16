@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crimson Wind</title>
+  <style>
+    body {
+      background-color: #005f46;
+      text-align: center;
+      color: #f5cba7;
+      font-family: Arial, sans-serif;
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+      padding-bottom: 30px;
+      border: 10px solid transparent;
+      border-radius: 15px;
+      animation: borderGlow 5s infinite linear;
+    }
+
+    @keyframes borderGlow {
+      0% { border-color: #ff99cc; }
+      25% { border-color: #ffcc99; }
+      50% { border-color: #99ffcc; }
+      75% { border-color: #99ccff; }
+      100% { border-color: #ff99cc; }
+    }
+
+    h1 {
+      color: red;
+      text-shadow: 0 0 10px red;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #ffb6c1;
+      text-shadow: 0 0 8px #ffb6c1;
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+
+    .semi-transparent-box {
+      padding: 15px;
+      display: inline-block;
+      width: 80%;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    .button {
+      background-color: #ffcc99;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .separator {
+      width: 90%;
+      height: 6px;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      border-radius: 5px;
+      margin: 20px auto;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: 14px;
+      color: #f5cba7;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡HOLA, BIENVENIDO A CRIMSON WIND!</h1>
+  <p>
+    Este es el primer sitio oficial del servidor para realizar tus compras de: Rangos | Monedas de Nekotina | VIP O | VIP S
+  </p>
+  <p>
+    <strong>Las únicas formas de pago que tenemos por el momento:</strong> 
+    PayPal | Robux 
+    <strong>(RECORDATORIO: Los robux no cuentan la Key All Event)</strong>
+  </p>
+  
+  <!-- Categoría TIENDA -->
+  <h2>TIENDA</h2>
+  <div class="container">
+    <div class="semi-transparent-box">
+      <a href="nekotina.html"><button class="button">MONEDAS DE NEKOTINA</button></a>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- Categoría RANGOS -->
+  <h2>RANGOS</h2>
+  <div class="container">
+    <div class="semi-transparent-box">
+      <button class="button">VIP O</button>
+      <button class="button">VIP S</button>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <!-- Categoría PRÓXIMAMENTE -->
+  <h2>PRÓXIMAMENTE</h2>
+  <div class="container">
+    <div class="semi-transparent-box">
+      <button class="button">PRÓXIMAMENTE...</button>
+      <button class="button">PRÓXIMAMENTE...</button>
+    </div>
+  </div>
+
+  <div class="separator"></div>
+
+  <footer>© Crimson Wind 2025-2026-2027</footer>
+</body>
+</html>

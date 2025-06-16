@@ -1,0 +1,75 @@
+/* Fondo */
+body {
+  background-color: #00534c;
+  color: #dcc258;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Título Principal */
+.titulo {
+  font-size: 50px;
+  color: #ff0000;
+  text-shadow: 0px 0px 10px #ff0000;
+  margin-top: 50px;
+}
+
+/* Contenedor */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Categorías */
+.categoria {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin: 10px 0;
+}
+
+/* Títulos de Categoría */
+.categoria-titulo {
+  font-size: 30px;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Tienda - Rosa pastel neón */
+.tienda {
+  color: #ffb6c1;
+  text-shadow: 0px 0px 10px #ffb6c1;
+}
+
+/* Rangos - Lila pastel neón */
+.rangos {
+  color: #d8b6ff;
+  text-shadow: 0px 0px 10px #d8b6ff;
+}
+
+/* Items dentro de las categorías */
+.item {
+  font-size: 20px;
+  color: #ffb6c1;
+  text-shadow: 0px 0px 5px #ffb6c1;
+}
+
+/* Separador llamativo pastel */
+.separador {
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1); 
+  border-radius: 2px;
+  margin: 20px auto;
+}
+
+/* Footer */
+.footer-texto {
+  font-size: 16px;
+  color: #ddd;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
