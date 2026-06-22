@@ -1,75 +1,181 @@
-/* Fondo */
-body {
-  background-color: #00534c;
-  color: #dcc258;
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* =========================
+   EVIL WAR STUDIOS CSS
+   ========================= */
+
+body{
+    background:
+    linear-gradient(rgba(8,12,10,.88),rgba(8,12,10,.88)),
+    radial-gradient(circle at top,#1f3b2d,#0b1511 70%);
+    color:#d4af37;
+    font-family:"Trebuchet MS",Arial,sans-serif;
+    text-align:center;
+    margin:0;
+    min-height:100vh;
 }
 
-/* Título Principal */
-.titulo {
-  font-size: 50px;
-  color: #ff0000;
-  text-shadow: 0px 0px 10px #ff0000;
-  margin-top: 50px;
+/* =========================
+   TITULO PRINCIPAL
+   ========================= */
+
+.titulo{
+    font-size:50px;
+    color:#ff3131;
+    text-shadow:
+        0 0 10px #ff3131,
+        0 0 20px #ff3131,
+        0 0 40px #8b0000;
+    margin-top:30px;
+    letter-spacing:3px;
 }
 
-/* Contenedor */
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+/* =========================
+   CONTENEDOR
+   ========================= */
+
+.contenedor{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:25px;
 }
 
-/* Categorías */
-.categoria {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  width: 60%;
-  margin: 10px 0;
+/* =========================
+   CATEGORIAS
+   ========================= */
+
+.categoria{
+    width:75%;
+    margin:15px 0;
+    padding:20px;
+
+    background:rgba(0,0,0,.55);
+
+    border:2px solid #d4af37;
+    border-radius:12px;
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.7),
+        inset 0 0 10px rgba(212,175,55,.25);
 }
 
-/* Títulos de Categoría */
-.categoria-titulo {
-  font-size: 30px;
-  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+/* =========================
+   TITULOS DE CATEGORIA
+   ========================= */
+
+.categoria-titulo{
+    font-size:30px;
+    margin-bottom:15px;
+    letter-spacing:2px;
 }
 
-/* Tienda - Rosa pastel neón */
-.tienda {
-  color: #ffb6c1;
-  text-shadow: 0px 0px 10px #ffb6c1;
+/* TIENDA */
+
+.tienda{
+    color:#d4af37;
+    text-shadow:
+        0 0 10px #d4af37,
+        0 0 20px #d4af37;
 }
 
-/* Rangos - Lila pastel neón */
-.rangos {
-  color: #d8b6ff;
-  text-shadow: 0px 0px 10px #d8b6ff;
+/* RANGOS */
+
+.rangos{
+    color:#ff4040;
+    text-shadow:
+        0 0 10px #ff4040,
+        0 0 20px #ff4040;
 }
 
-/* Items dentro de las categorías */
-.item {
-  font-size: 20px;
-  color: #ffb6c1;
-  text-shadow: 0px 0px 5px #ffb6c1;
+/* =========================
+   ITEMS
+   ========================= */
+
+.item{
+    font-size:20px;
+    color:#e8d59c;
+    text-shadow:0 0 5px rgba(212,175,55,.8);
+    margin:5px;
 }
 
-/* Separador llamativo pastel */
-.separador {
-  width: 80%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1); 
-  border-radius: 2px;
-  margin: 20px auto;
+/* =========================
+   BOTONES
+   ========================= */
+
+.boton{
+    background:#232323;
+    color:#d4af37;
+
+    border:1px solid #d4af37;
+    border-radius:8px;
+
+    padding:12px 20px;
+    margin:8px;
+
+    cursor:pointer;
+    font-weight:bold;
+
+    transition:.3s;
 }
 
-/* Footer */
-.footer-texto {
-  font-size: 16px;
-  color: #ddd;
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
+.boton:hover{
+    background:#d4af37;
+    color:black;
+
+    box-shadow:
+        0 0 15px #d4af37,
+        0 0 30px #d4af37;
+
+    transform:scale(1.05);
+}
+
+/* =========================
+   SEPARADOR
+   ========================= */
+
+.separador{
+    width:85%;
+    height:4px;
+
+    margin:25px auto;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        #ff3131,
+        #d4af37,
+        transparent
+    );
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer-texto{
+    font-size:14px;
+    color:#c7b77d;
+
+    padding:15px;
+    margin-top:30px;
+}
+
+/* =========================
+   EFECTOS EXTRA
+   ========================= */
+
+.glow-gold{
+    color:#d4af37;
+    text-shadow:
+        0 0 10px #d4af37,
+        0 0 20px #d4af37;
+}
+
+.glow-red{
+    color:#ff3131;
+    text-shadow:
+        0 0 10px #ff3131,
+        0 0 20px #ff3131;
 }
