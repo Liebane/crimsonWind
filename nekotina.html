@@ -1,110 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Monedas de Nekotina</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monedas de Nekotina - Evil War Studios</title>
 
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      overflow: hidden;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
+html,body{
+    height:100%;
+    font-family:"Trebuchet MS",Arial,sans-serif;
+    overflow:hidden;
+}
 
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-    }
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
 
-    h1 {
-      font-size: 36px;
-      color: #ffb6c1;
-      text-shadow: 0 0 15px #ff66cc;
-      margin-bottom: 30px;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(5,10,8,0.78);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
 
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #ff66cc; }
-      to { text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff66cc; }
-    }
+h1{
+    color:#d4af37;
+    font-size:42px;
+    text-shadow:
+        0 0 10px #d4af37,
+        0 0 20px #d4af37,
+        0 0 35px #b8860b;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
 
-    .precio {
-      background-color: rgba(255, 255, 255, 0.85);
-      color: #333;
-      padding: 15px 25px;
-      margin: 10px 0;
-      border-radius: 14px;
-      font-size: 18px;
-      width: fit-content;
-      box-shadow: 0 5px 15px rgba(255, 192, 203, 0.4);
-      transition: transform 0.3s ease;
-    }
+.subtitulo{
+    color:#ff4040;
+    font-size:18px;
+    text-shadow:0 0 10px #ff4040;
+    margin-bottom:35px;
+}
 
-    .precio:hover {
-      transform: scale(1.1);
-      background-color: #ffe5f0;
-    }
+.precio{
+    width:320px;
+    margin:8px;
+    padding:15px;
+    background:rgba(0,0,0,0.65);
+    border:2px solid #d4af37;
+    border-radius:10px;
+    color:#d4af37;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:
+        0 0 10px rgba(212,175,55,.6),
+        inset 0 0 10px rgba(212,175,55,.2);
+    transition:.3s;
+}
 
-    a {
-      display: inline-block;
-      margin-top: 40px;
-      font-size: 16px;
-      text-decoration: none;
-      background-color: #ff85c1;
-      padding: 10px 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px #ff85c1;
-      transition: 0.3s ease;
-      color: white;
-    }
+.precio:hover{
+    transform:scale(1.05);
+    box-shadow:
+        0 0 20px #d4af37,
+        0 0 35px #d4af37;
+}
 
-    a:hover {
-      background-color: #ff66aa;
-    }
-  </style>
+.volver{
+    margin-top:35px;
+    text-decoration:none;
+    background:#232323;
+    color:#d4af37;
+    border:2px solid #d4af37;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.volver:hover{
+    background:#d4af37;
+    color:black;
+    box-shadow:0 0 20px #d4af37;
+}
+
+.footer{
+    position:absolute;
+    bottom:15px;
+    color:#aaa;
+    font-size:12px;
+}
+</style>
 </head>
+
 <body>
-  <!-- Video de fondo -->
-  <video id="bg-video" autoplay muted loop playsinline>
+
+<video id="bg-video" autoplay muted loop playsinline>
     <source src="https://media.tenor.com/8Epk9kxljeQAAAPo/snow-gif-for-discord-banner.mp4" type="video/mp4">
-    Tu navegador no soporta video de fondo.
-  </video>
+    Tu navegador no soporta videos.
+</video>
 
-  <div class="overlay">
-    <h1>🎀 Tienda de Monedas de Nekotina 🎀</h1>
+<div class="overlay">
 
-    <div class="precio">35.000 Monedas - $1.5 USD</div>
-    <div class="precio">46.000 Monedas - $2 USD</div>
-    <div class="precio">59.000 Monedas - $2.8 USD</div>
-    <div class="precio">72.000 Monedas - $2.8 USD</div>
-    <div class="precio">95.000 Monedas - $3 USD</div>
-    <div class="precio">160.000 Monedas - $5 USD</div>
+    <h1>MONEDAS DE NEKOTINA</h1>
+    <p class="subtitulo">⚔ Centro Imperial de Suministros ⚔</p>
 
-    <a href="index.html">← Volver al inicio</a>
-  </div>
+    <div class="precio">50.550 Monedas — $1.50 USD</div>
+    <div class="precio">80.000 Monedas — $2.00 USD</div>
+    <div class="precio">170.000 Monedas — $2.50 USD</div>
+    <div class="precio">220.000 Monedas — $3.80 USD</div>
+    <div class="precio">370.000 Monedas — $5.00 USD</div>
+    <div class="precio">600.000 Monedas — $7.00 USD</div>
+
+    <a class="volver" href="index.html">← Volver al Inicio</a>
+
+    <div class="footer">
+        Evil War Studios © 2025 - 2026
+    </div>
+
+</div>
+
 </body>
 </html>
