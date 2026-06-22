@@ -1,125 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crimson Wind</title>
-  <style>
-    body {
-      background-color: #005f46;
-      text-align: center;
-      color: #f5cba7;
-      font-family: Arial, sans-serif;
-      position: relative;
-      min-height: 100vh;
-      margin: 0;
-      padding-bottom: 30px;
-      border: 10px solid transparent;
-      border-radius: 15px;
-      animation: borderGlow 5s infinite linear;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evil War Studios</title>
 
-    @keyframes borderGlow {
-      0% { border-color: #ff99cc; }
-      25% { border-color: #ffcc99; }
-      50% { border-color: #99ffcc; }
-      75% { border-color: #99ccff; }
-      100% { border-color: #ff99cc; }
-    }
+<style>
+body{
+    background:
+    linear-gradient(rgba(8,12,10,.88),rgba(8,12,10,.88)),
+    radial-gradient(circle at top,#1f3b2d,#0b1511 70%);
+    color:#d4af37;
+    font-family:"Trebuchet MS",Arial,sans-serif;
+    text-align:center;
+    margin:0;
+    min-height:100vh;
+    border:8px solid #d4af37;
+    box-shadow:0 0 20px #d4af37;
+}
 
-    h1 {
-      color: red;
-      text-shadow: 0 0 10px red;
-      margin-top: 20px;
-    }
+h1{
+    color:#ff3131;
+    text-shadow:
+    0 0 10px #ff3131,
+    0 0 20px #ff3131,
+    0 0 40px #8b0000;
+    margin-top:25px;
+    letter-spacing:3px;
+}
 
-    h2 {
-      color: #ffb6c1;
-      text-shadow: 0 0 8px #ffb6c1;
-    }
+.subtitulo{
+    color:#d4af37;
+    text-shadow:0 0 10px #d4af37;
+    margin-bottom:25px;
+}
 
-    .container {
-      margin-top: 20px;
-    }
+h2{
+    color:#d4af37;
+    text-shadow:
+    0 0 10px #d4af37,
+    0 0 20px #d4af37;
+    letter-spacing:2px;
+}
 
-    .semi-transparent-box {
-      padding: 15px;
-      display: inline-block;
-      width: 80%;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-    }
+.container{
+    margin-top:20px;
+}
 
-    .button {
-      background-color: #ffcc99;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+.semi-transparent-box{
+    width:80%;
+    display:inline-block;
+    padding:20px;
+    background:rgba(0,0,0,.55);
+    border:2px solid #d4af37;
+    border-radius:12px;
+    box-shadow:
+    0 0 15px rgba(212,175,55,.7),
+    inset 0 0 10px rgba(212,175,55,.25);
+}
 
-    .separator {
-      width: 90%;
-      height: 6px;
-      background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
-      border-radius: 5px;
-      margin: 20px auto;
-    }
+.button{
+    background:#232323;
+    color:#d4af37;
+    border:1px solid #d4af37;
+    padding:12px 20px;
+    margin:8px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
 
-    footer {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      font-size: 14px;
-      color: #f5cba7;
-    }
-  </style>
+.button:hover{
+    background:#d4af37;
+    color:black;
+    box-shadow:0 0 20px #d4af37;
+    transform:scale(1.05);
+}
+
+.separator{
+    width:90%;
+    height:4px;
+    margin:25px auto;
+    border-radius:10px;
+    background:linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #ff3131,
+    #d4af37,
+    transparent
+    );
+}
+
+footer{
+    margin-top:30px;
+    padding:20px;
+    color:#c7b77d;
+}
+</style>
 </head>
+
 <body>
-  <h1>¡HOLA, BIENVENIDO A CRIMSON WIND!</h1>
-  <p>
-    Este es el primer sitio oficial del servidor para realizar tus compras de: Rangos | Monedas de Nekotina | VIP O | VIP S
-  </p>
-  <p>
-    <strong>Las únicas formas de pago que tenemos por el momento:</strong> 
-    PayPal | Robux 
-    <strong>(RECORDATORIO: Los robux no cuentan la Key All Event)</strong>
-  </p>
-  
-  <!-- Categoría TIENDA -->
-  <h2>TIENDA</h2>
-  <div class="container">
-    <div class="semi-transparent-box">
-      <a href="nekotina.html"><button class="button">MONEDAS DE NEKOTINA</button></a>
-    </div>
-  </div>
 
-  <div class="separator"></div>
+<h1>EVIL WAR STUDIOS</h1>
 
-  <!-- Categoría RANGOS -->
-  <h2>RANGOS</h2>
-  <div class="container">
-    <div class="semi-transparent-box">
-      <button class="button">VIP O</button>
-      <button class="button">VIP S</button>
-    </div>
-  </div>
+<p class="subtitulo">
+⚔ División Imperial de Comercio Militar ⚔
+</p>
 
-  <div class="separator"></div>
+<p>
+Este es el primer sitio oficial del servidor para realizar tus compras de Rangos u otras cosas:
+<strong>
+| Monedas de Nekotina | MAYOR I | MAYOR II | MAYOR III | MAYOR IV |
+</strong>
+</p>
 
-  <!-- Categoría PRÓXIMAMENTE -->
-  <h2>PRÓXIMAMENTE</h2>
-  <div class="container">
-    <div class="semi-transparent-box">
-      <button class="button">PRÓXIMAMENTE...</button>
-      <button class="button">PRÓXIMAMENTE...</button>
-    </div>
-  </div>
+<p>
+<strong>Las únicas formas de pago que tenemos por el momento:</strong>
+PayPal | Visa | MasterCard | American Express | Discover | Diners Club | JCB | Bitcoin | Ethereum | Litecoin
+<br><br>
+<strong>
+(RECORDATORIO: Si tienes alguna duda sobre el proceso de compra, no dudes en contactarnos. Para poder proceder con tu compra, asegúrate de tener los datos de pago disponibles.)
+</strong>
+</p>
 
-  <div class="separator"></div>
+<div class="separator"></div>
 
-  <footer>© Crimson Wind 2025-2026-2027</footer>
+<h2>TIENDA</h2>
+<div class="container">
+<div class="semi-transparent-box">
+<a href="nekotina.html">
+<button class="button">MONEDAS DE NEKOTINA</button>
+</a>
+</div>
+</div>
+
+<div class="separator"></div>
+
+<h2>RANGOS</h2>
+<div class="container">
+<div class="semi-transparent-box">
+<button class="button">MAYOR I</button>
+<button class="button">MAYOR II</button>
+<button class="button">MAYOR III</button>
+<button class="button">MAYOR IV</button>
+</div>
+</div>
+
+<div class="separator"></div>
+
+<h2>PRÓXIMAMENTE</h2>
+<div class="container">
+<div class="semi-transparent-box">
+<button class="button">COMANDANTE SUPREMO</button>
+<button class="button">GENERAL DE GUERRA</button>
+</div>
+</div>
+
+<div class="separator"></div>
+
+<footer>
+© Evil War Studios. Todos los derechos reservados.<br><br>
+
+Preguntas | Comentarios | Sugerencias<br>
+Contacto: 098-032-4690<br><br>
+
+Términos y Condiciones | Política de Privacidad<br>
+2025 - 2026
+</footer>
+
 </body>
 </html>
