@@ -4,77 +4,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comprar - Evil War Studios</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
+<link rel="stylesheet" href="style.css">
+
+</head>
 <body>
 
 <div class="war-frame">
 
 <header class="hero">
-<p class="seal">⚔ TERMINAL DE COMPRA ⚔</p>
-<h1>FINALIZAR COMPRA</h1>
-<p class="subtitulo">Unidad Imperial de Transacciones</p>
+
+<p class="seal">
+⚔ TERMINAL IMPERIAL DE COMPRA ⚔
+</p>
+
+<h1>EXPEDIENTE DEL PRODUCTO</h1>
+
+<p class="subtitulo">
+Departamento Imperial de Comercio Militar
+</p>
+
 </header>
 
-<section class="shop-block">
+<section class="checkout-grid">
 
-<h2>Expediente del Producto</h2>
+<!-- INFORMACIÓN -->
+
+<div class="checkout-box">
+
+<h2>📦 Información</h2>
 
 <p class="info">
-Confirma tu compra dentro de Evil War Studios. Aquí aparecerá únicamente
-el producto que elegiste.
+
+Esta sección sirve para confirmar tu compra dentro de Evil War Studios.
+Aquí podrás revisar la información del producto antes de continuar con el pago.
+
 </p>
 
-<div class="checkout-grid">
+<div class="status-box">
+
+<p><strong>Estado:</strong> <span class="status-green">● Compra pendiente</span></p>
+
+<p><strong>Entrega:</strong> Manual por Staff</p>
+
+<p><strong>Uso:</strong> Servidor Discord + Juego Roblox</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCTO -->
 
 <div class="checkout-box">
-<h3>📦 Información</h3>
 
-<p>
-Antes de pagar, confirma el producto que deseas comprar. Los beneficios
-pueden aplicarse al servidor de Discord y al futuro juego oficial de Roblox.
-</p>
-
-<div class="order-line">
-<span>Estado:</span>
-<strong class="status-green">● Compra pendiente</strong>
-</div>
-
-<div class="order-line">
-<span>Entrega:</span>
-<strong>Manual por Staff</strong>
-</div>
-
-<div class="order-line">
-<span>Uso:</span>
-<strong>Servidor / Juego Roblox</strong>
-</div>
-</div>
-
-<div class="checkout-box">
-<h3>🛒 Resumen del Pedido</h3>
+<h2>🛒 Resumen del Pedido</h2>
 
 <label>Producto seleccionado</label>
-<input type="text" id="producto" readonly>
+
+<input
+type="text"
+id="producto"
+readonly>
 
 <label>Precio</label>
-<input type="text" id="precio" readonly>
 
-<label>Usuario de Discord</label>
-<input type="text" placeholder="Ejemplo: zesty#0000">
+<input
+type="text"
+id="precio"
+readonly>
 
 <label>Usuario de Roblox</label>
-<input type="text" placeholder="Tu usuario de Roblox">
 
-<label>Correo de contacto</label>
-<input type="email" placeholder="correo@ejemplo.com">
+<input
+type="text"
+placeholder="Ejemplo: Zesty">
+
+<label>Usuario de Discord</label>
+
+<input
+type="text"
+placeholder="Ejemplo: zesty_1234">
+
 </div>
 
-<div class="checkout-box payment-box">
-<h3>💳 Métodos de Pago</h3>
+<!-- PAGO -->
+
+<div class="checkout-box">
+
+<h2>💳 Métodos de Pago</h2>
 
 <div class="payment-methods">
+
 <span>PayPal</span>
 <span>Visa</span>
 <span>MasterCard</span>
@@ -85,50 +105,83 @@ pueden aplicarse al servidor de Discord y al futuro juego oficial de Roblox.
 <span>Bitcoin</span>
 <span>Ethereum</span>
 <span>Litecoin</span>
+
 </div>
 
 <label>Nombre del titular</label>
-<input type="text" placeholder="Nombre completo">
+
+<input
+type="text"
+placeholder="Nombre completo">
 
 <label>Número de tarjeta</label>
-<input type="text" placeholder="0000 0000 0000 0000">
+
+<input
+type="text"
+placeholder="0000 0000 0000 0000">
 
 <div class="mini-grid">
+
 <div>
+
 <label>Expira</label>
-<input type="text" placeholder="MM/AA">
+
+<input
+type="text"
+placeholder="MM/AA">
+
 </div>
 
 <div>
+
 <label>CVV</label>
-<input type="text" placeholder="123">
-</div>
+
+<input
+type="text"
+placeholder="123">
+
 </div>
 
-<button class="button finish-button">Finalizar Compra</button>
+</div>
+
+<button class="button finish-button">
+
+FINALIZAR COMPRA
+
+</button>
 
 <p class="payment-note">
-Esta interfaz es visual. Para pagos reales, confirma el proceso con el staff
-o conecta un sistema seguro de pagos.
+
+Esta interfaz es únicamente demostrativa.
+El pago será confirmado manualmente por el Staff de Evil War Studios.
+
 </p>
-</div>
 
 </div>
 
 </section>
 
-<a href="index.html" class="button back-button">← Volver al Inicio</a>
+<a href="index.html" class="button back-button">
+
+← Volver al Inicio
+
+</a>
 
 </div>
 
 <script>
+
 const params = new URLSearchParams(window.location.search);
 
-const producto = params.get("producto") || "Producto no seleccionado";
-const precio = params.get("precio") || "0.00";
+const producto = params.get("producto");
+const precio = params.get("precio");
 
-document.getElementById("producto").value = producto;
-document.getElementById("precio").value = "$" + precio + " USD";
+document.getElementById("producto").value =
+producto ? decodeURIComponent(producto) : "Producto no seleccionado";
+
+document.getElementById("precio").value =
+precio ? "$" + precio + " USD" : "Sin precio";
+
 </script>
 
 </body>
