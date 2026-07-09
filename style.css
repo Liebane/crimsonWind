@@ -1,181 +1,450 @@
-/* =========================
-   EVIL WAR STUDIOS CSS
-   ========================= */
+/* ===========================================================
+   EVIL WAR STUDIOS
+   Inspired Military UI
+   =========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
+
     background:
-    linear-gradient(rgba(8,12,10,.88),rgba(8,12,10,.88)),
-    radial-gradient(circle at top,#1f3b2d,#0b1511 70%);
-    color:#d4af37;
-    font-family:"Trebuchet MS",Arial,sans-serif;
-    text-align:center;
-    margin:0;
+    radial-gradient(circle at top,#24402f 0%,#15261d 35%,#0a0f0c 100%);
+
+    color:#d7c487;
+
+    font-family:
+    "Trebuchet MS",
+    "Segoe UI",
+    sans-serif;
+
     min-height:100vh;
 }
 
-/* =========================
-   TITULO PRINCIPAL
-   ========================= */
 
-.titulo{
-    font-size:50px;
-    color:#ff3131;
+/* =======================================
+   CONTENEDOR PRINCIPAL
+======================================= */
+
+.war-frame{
+
+    width:92%;
+    max-width:1300px;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border:2px solid #9d8450;
+
+    border-radius:14px;
+
+    background:
+    rgba(0,0,0,.45);
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.25),
+    inset 0 0 25px rgba(255,255,255,.03);
+
+}
+
+
+/* =======================================
+   CABECERA
+======================================= */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.seal{
+
+    color:#d4af37;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    opacity:.8;
+
+}
+
+.hero h1{
+
+    margin-top:15px;
+
+    font-size:55px;
+
+    color:#d92e2e;
+
+    letter-spacing:6px;
+
     text-shadow:
-        0 0 10px #ff3131,
-        0 0 20px #ff3131,
-        0 0 40px #8b0000;
-    margin-top:30px;
-    letter-spacing:3px;
+
+    0 0 8px #d92e2e,
+
+    0 0 20px #8b0000,
+
+    0 0 45px rgba(217,46,46,.5);
+
 }
 
-/* =========================
-   CONTENEDOR
-   ========================= */
+.subtitulo{
 
-.contenedor{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:25px;
+    margin-top:15px;
+
+    font-size:18px;
+
+    color:#d4af37;
+
+    letter-spacing:2px;
+
 }
 
-/* =========================
+
+/* =======================================
+   AVISOS
+======================================= */
+
+.notice{
+
+    width:90%;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    text-align:center;
+
+    color:#ddd;
+
+}
+
+.warning{
+
+    margin-top:20px;
+
+    color:#e4bc55;
+
+}
+
+
+/* =======================================
+   SEPARADOR
+======================================= */
+
+.separator{
+
+    width:100%;
+
+    height:2px;
+
+    margin:45px 0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    #d4af37,
+
+    #b52d2d,
+
+    #d4af37,
+
+    transparent);
+
+}
+
+
+/* =======================================
    CATEGORIAS
-   ========================= */
+======================================= */
 
-.categoria{
-    width:75%;
-    margin:15px 0;
-    padding:20px;
+.category{
 
-    background:rgba(0,0,0,.55);
+    text-align:center;
 
-    border:2px solid #d4af37;
+}
+
+.category h2{
+
+    color:#d4af37;
+
+    font-size:30px;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 0 10px rgba(212,175,55,.5);
+
+}
+
+
+/* =======================================
+   PANEL
+======================================= */
+
+.panel{
+
+    background:
+
+    rgba(255,255,255,.03);
+
+    border:
+
+    1px solid rgba(212,175,55,.35);
+
     border-radius:12px;
 
-    box-shadow:
-        0 0 15px rgba(212,175,55,.7),
-        inset 0 0 10px rgba(212,175,55,.25);
+    padding:30px;
+
 }
 
-/* =========================
-   TITULOS DE CATEGORIA
-   ========================= */
+.panel-text{
 
-.categoria-titulo{
-    font-size:30px;
-    margin-bottom:15px;
-    letter-spacing:2px;
+    margin-bottom:25px;
+
+    color:#d0d0d0;
+
 }
 
-/* TIENDA */
 
-.tienda{
-    color:#d4af37;
-    text-shadow:
-        0 0 10px #d4af37,
-        0 0 20px #d4af37;
-}
-
-/* RANGOS */
-
-.rangos{
-    color:#ff4040;
-    text-shadow:
-        0 0 10px #ff4040,
-        0 0 20px #ff4040;
-}
-
-/* =========================
-   ITEMS
-   ========================= */
-
-.item{
-    font-size:20px;
-    color:#e8d59c;
-    text-shadow:0 0 5px rgba(212,175,55,.8);
-    margin:5px;
-}
-
-/* =========================
+/* =======================================
    BOTONES
-   ========================= */
+======================================= */
 
-.boton{
-    background:#232323;
+.button{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:
+
+    linear-gradient(#393939,#202020);
+
     color:#d4af37;
 
-    border:1px solid #d4af37;
+    padding:
+
+    14px 28px;
+
+    margin:10px;
+
     border-radius:8px;
 
-    padding:12px 20px;
-    margin:8px;
+    border:1px solid #9d8450;
 
-    cursor:pointer;
+    transition:.25s;
+
     font-weight:bold;
 
-    transition:.3s;
+    cursor:pointer;
+
 }
 
-.boton:hover{
-    background:#d4af37;
-    color:black;
+.button:hover{
+
+    transform:
+
+    translateY(-3px);
+
+    background:
+
+    linear-gradient(#d4af37,#9c7d29);
+
+    color:#111;
 
     box-shadow:
-        0 0 15px #d4af37,
-        0 0 30px #d4af37;
 
-    transform:scale(1.05);
+    0 0 18px rgba(212,175,55,.6);
+
 }
 
-/* =========================
-   SEPARADOR
-   ========================= */
 
-.separador{
-    width:85%;
-    height:4px;
+/* =======================================
+   PRODUCTOS
+======================================= */
 
-    margin:25px auto;
+.shop-block{
+
+    margin-top:30px;
+
+}
+
+.shop-block h2{
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.info{
+
+    margin-bottom:30px;
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+}
+
+.product-list{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(330px,1fr));
+
+    gap:20px;
+
+}
+
+.product-card{
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:
+
+    1px solid rgba(212,175,55,.35);
 
     border-radius:10px;
 
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #d4af37,
-        #ff3131,
-        #d4af37,
-        transparent
-    );
+    padding:20px;
+
+    transition:.25s;
+
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+.product-card:hover{
 
-.footer-texto{
-    font-size:14px;
-    color:#c7b77d;
+    transform:
 
-    padding:15px;
-    margin-top:30px;
+    translateY(-6px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+
+    0 0 18px rgba(212,175,55,.25);
+
 }
 
-/* =========================
-   EFECTOS EXTRA
-   ========================= */
+.product-card span{
 
-.glow-gold{
+    display:block;
+
+    font-size:22px;
+
     color:#d4af37;
-    text-shadow:
-        0 0 10px #d4af37,
-        0 0 20px #d4af37;
+
+    margin-bottom:12px;
+
 }
 
-.glow-red{
-    color:#ff3131;
-    text-shadow:
-        0 0 10px #ff3131,
-        0 0 20px #ff3131;
+.product-card strong{
+
+    display:block;
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.product-card p{
+
+    color:#d5d5d5;
+
+    line-height:1.7;
+
+}
+
+
+/* =======================================
+   BOTON VOLVER
+======================================= */
+
+.back-button{
+
+    margin-top:45px;
+
+}
+
+
+/* =======================================
+   FOOTER
+======================================= */
+
+footer{
+
+    margin-top:50px;
+
+    padding-top:20px;
+
+    text-align:center;
+
+    border-top:
+
+    1px solid rgba(212,175,55,.25);
+
+    color:#9d9d9d;
+
+    line-height:1.9;
+
+}
+
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.product-list{
+
+    grid-template-columns:1fr;
+
+}
+
+.war-frame{
+
+    width:96%;
+
+    padding:20px;
+
+}
+
 }
