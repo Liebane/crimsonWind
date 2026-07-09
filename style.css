@@ -1,450 +1,215 @@
-/* ===========================================================
-   EVIL WAR STUDIOS
-   Inspired Military UI
-   =========================================================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-
-    background:
-    radial-gradient(circle at top,#24402f 0%,#15261d 35%,#0a0f0c 100%);
-
-    color:#d7c487;
-
-    font-family:
-    "Trebuchet MS",
-    "Segoe UI",
-    sans-serif;
-
     min-height:100vh;
+    font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
+    color:#f1d06a;
+    background:
+        linear-gradient(rgba(2,8,5,.88),rgba(2,8,5,.92)),
+        radial-gradient(circle at top,#163923,#050807 70%);
+    text-align:center;
+    overflow-x:hidden;
 }
 
-
-/* =======================================
-   CONTENEDOR PRINCIPAL
-======================================= */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        linear-gradient(90deg,rgba(255,215,90,.04) 1px,transparent 1px),
+        linear-gradient(rgba(255,215,90,.04) 1px,transparent 1px);
+    background-size:45px 45px;
+    opacity:.45;
+}
 
 .war-frame{
-
     width:92%;
-    max-width:1300px;
-
-    margin:40px auto;
-
+    max-width:1200px;
+    margin:35px auto;
     padding:35px;
-
-    border:2px solid #9d8450;
-
-    border-radius:14px;
-
-    background:
-    rgba(0,0,0,.45);
-
+    background:rgba(0,0,0,.58);
+    border:3px solid transparent;
+    border-radius:18px;
+    animation:borderRGB 5s linear infinite;
     box-shadow:
-    0 0 25px rgba(212,175,55,.25),
-    inset 0 0 25px rgba(255,255,255,.03);
-
+        0 0 25px rgba(255,0,0,.35),
+        0 0 45px rgba(212,175,55,.25),
+        inset 0 0 30px rgba(212,175,55,.08);
 }
 
-
-/* =======================================
-   CABECERA
-======================================= */
+@keyframes borderRGB{
+    0%{border-color:#ff3131;box-shadow:0 0 25px #ff3131;}
+    25%{border-color:#d4af37;box-shadow:0 0 25px #d4af37;}
+    50%{border-color:#1cff9a;box-shadow:0 0 25px #1cff9a;}
+    75%{border-color:#3aa0ff;box-shadow:0 0 25px #3aa0ff;}
+    100%{border-color:#ff3131;box-shadow:0 0 25px #ff3131;}
+}
 
 .hero{
-
-    text-align:center;
-
-    margin-bottom:45px;
-
+    padding:25px;
+    border:1px solid rgba(212,175,55,.45);
+    border-radius:14px;
+    background:linear-gradient(135deg,rgba(20,35,24,.85),rgba(0,0,0,.65));
+    box-shadow:inset 0 0 25px rgba(212,175,55,.12);
 }
 
 .seal{
-
     color:#d4af37;
-
-    font-size:14px;
-
     letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    opacity:.8;
-
+    font-size:14px;
+    text-shadow:0 0 10px #d4af37;
 }
 
 .hero h1{
-
     margin-top:15px;
-
-    font-size:55px;
-
-    color:#d92e2e;
-
+    font-size:56px;
+    color:#ff3434;
     letter-spacing:6px;
-
     text-shadow:
-
-    0 0 8px #d92e2e,
-
-    0 0 20px #8b0000,
-
-    0 0 45px rgba(217,46,46,.5);
-
+        0 0 10px #ff3434,
+        0 0 25px #ff3434,
+        0 0 45px #700000;
 }
 
 .subtitulo{
-
     margin-top:15px;
-
-    font-size:18px;
-
-    color:#d4af37;
-
-    letter-spacing:2px;
-
+    color:#f5d879;
+    text-shadow:0 0 10px #d4af37;
 }
 
-
-/* =======================================
-   AVISOS
-======================================= */
-
-.notice{
-
+.notice,.info{
     width:90%;
-
-    margin:auto;
-
+    margin:25px auto;
     line-height:1.8;
-
-    text-align:center;
-
-    color:#ddd;
-
+    color:#e6d8a5;
 }
 
 .warning{
-
-    margin-top:20px;
-
-    color:#e4bc55;
-
+    color:#ff5c5c;
+    text-shadow:0 0 8px #ff3131;
 }
-
-
-/* =======================================
-   SEPARADOR
-======================================= */
 
 .separator{
-
     width:100%;
-
-    height:2px;
-
-    margin:45px 0;
-
-    background:
-
-    linear-gradient(
-
-    90deg,
-
-    transparent,
-
-    #d4af37,
-
-    #b52d2d,
-
-    #d4af37,
-
-    transparent);
-
+    height:5px;
+    margin:35px 0;
+    border-radius:20px;
+    background:linear-gradient(90deg,transparent,#ff3131,#d4af37,#1cff9a,#d4af37,#ff3131,transparent);
+    box-shadow:0 0 18px #d4af37;
 }
 
-
-/* =======================================
-   CATEGORIAS
-======================================= */
-
-.category{
-
-    text-align:center;
-
-}
-
-.category h2{
-
+.category h2,.shop-block h2{
+    font-size:32px;
     color:#d4af37;
-
-    font-size:30px;
-
     letter-spacing:3px;
-
+    text-shadow:0 0 12px #d4af37;
     margin-bottom:20px;
-
-    text-shadow:
-
-    0 0 10px rgba(212,175,55,.5);
-
 }
 
-
-/* =======================================
-   PANEL
-======================================= */
-
-.panel{
-
-    background:
-
-    rgba(255,255,255,.03);
-
-    border:
-
-    1px solid rgba(212,175,55,.35);
-
-    border-radius:12px;
-
+.panel,.shop-block{
     padding:30px;
-
+    background:rgba(5,10,7,.75);
+    border:2px solid rgba(212,175,55,.65);
+    border-radius:16px;
+    box-shadow:
+        0 0 18px rgba(212,175,55,.35),
+        inset 0 0 25px rgba(255,255,255,.04);
 }
 
 .panel-text{
-
-    margin-bottom:25px;
-
-    color:#d0d0d0;
-
+    color:#ddd0a0;
+    margin-bottom:20px;
 }
 
-
-/* =======================================
-   BOTONES
-======================================= */
-
 .button{
-
     display:inline-block;
-
     text-decoration:none;
-
-    background:
-
-    linear-gradient(#393939,#202020);
-
-    color:#d4af37;
-
-    padding:
-
-    14px 28px;
-
-    margin:10px;
-
-    border-radius:8px;
-
-    border:1px solid #9d8450;
-
-    transition:.25s;
-
+    background:linear-gradient(145deg,#1b1b1b,#2b2416);
+    color:#ffd76a;
+    border:2px solid #d4af37;
+    border-radius:10px;
+    padding:14px 30px;
+    margin:12px;
     font-weight:bold;
-
-    cursor:pointer;
-
+    letter-spacing:1px;
+    text-transform:uppercase;
+    box-shadow:0 0 14px rgba(212,175,55,.45);
+    transition:.25s;
 }
 
 .button:hover{
-
-    transform:
-
-    translateY(-3px);
-
-    background:
-
-    linear-gradient(#d4af37,#9c7d29);
-
-    color:#111;
-
-    box-shadow:
-
-    0 0 18px rgba(212,175,55,.6);
-
-}
-
-
-/* =======================================
-   PRODUCTOS
-======================================= */
-
-.shop-block{
-
-    margin-top:30px;
-
-}
-
-.shop-block h2{
-
-    color:#d4af37;
-
-    margin-bottom:15px;
-
-}
-
-.info{
-
-    margin-bottom:30px;
-
-    color:#d6d6d6;
-
-    line-height:1.8;
-
+    background:linear-gradient(145deg,#d4af37,#8d6b16);
+    color:#080808;
+    transform:translateY(-4px) scale(1.04);
+    box-shadow:0 0 25px #d4af37;
 }
 
 .product-list{
-
     display:grid;
-
-    grid-template-columns:
-
-    repeat(auto-fit,minmax(330px,1fr));
-
-    gap:20px;
-
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+    margin-top:25px;
 }
 
 .product-card{
-
-    background:
-
-    rgba(255,255,255,.04);
-
-    border:
-
-    1px solid rgba(212,175,55,.35);
-
-    border-radius:10px;
-
-    padding:20px;
-
+    padding:22px;
+    background:linear-gradient(145deg,rgba(20,30,20,.9),rgba(0,0,0,.85));
+    border:2px solid rgba(212,175,55,.45);
+    border-radius:14px;
+    box-shadow:0 0 18px rgba(212,175,55,.25);
     transition:.25s;
-
 }
 
 .product-card:hover{
-
-    transform:
-
-    translateY(-6px);
-
-    border-color:#d4af37;
-
-    box-shadow:
-
-    0 0 18px rgba(212,175,55,.25);
-
+    transform:translateY(-6px);
+    border-color:#ff3131;
+    box-shadow:0 0 25px rgba(255,49,49,.65);
 }
 
 .product-card span{
-
     display:block;
-
     font-size:22px;
-
-    color:#d4af37;
-
+    color:#ffd76a;
     margin-bottom:12px;
-
+    text-shadow:0 0 8px #d4af37;
 }
 
 .product-card strong{
-
     display:block;
-
-    color:#ffffff;
-
     font-size:24px;
-
-    margin-bottom:15px;
-
+    color:#fff;
+    margin-bottom:12px;
 }
 
 .product-card p{
-
-    color:#d5d5d5;
-
+    color:#d9d0ad;
     line-height:1.7;
-
 }
-
-
-/* =======================================
-   BOTON VOLVER
-======================================= */
 
 .back-button{
-
-    margin-top:45px;
-
+    margin-top:35px;
 }
-
-
-/* =======================================
-   FOOTER
-======================================= */
 
 footer{
-
-    margin-top:50px;
-
-    padding-top:20px;
-
-    text-align:center;
-
-    border-top:
-
-    1px solid rgba(212,175,55,.25);
-
-    color:#9d9d9d;
-
-    line-height:1.9;
-
+    margin-top:45px;
+    padding:25px;
+    color:#c7b77d;
+    border-top:1px solid rgba(212,175,55,.4);
+    line-height:1.8;
 }
-
-
-/* =======================================
-   RESPONSIVE
-======================================= */
 
 @media(max-width:768px){
+    .hero h1{
+        font-size:35px;
+    }
 
-.hero h1{
-
-    font-size:36px;
-
-}
-
-.product-list{
-
-    grid-template-columns:1fr;
-
-}
-
-.war-frame{
-
-    width:96%;
-
-    padding:20px;
-
-}
-
+    .war-frame{
+        width:96%;
+        padding:20px;
+    }
 }
