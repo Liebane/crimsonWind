@@ -9,8 +9,8 @@ body{
     font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;
     color:#f1d06a;
     background:
-        linear-gradient(rgba(2,8,5,.88),rgba(2,8,5,.92)),
-        radial-gradient(circle at top,#163923,#050807 70%);
+        linear-gradient(rgba(3,8,7,.90),rgba(3,8,7,.94)),
+        radial-gradient(circle at top,#183628 0%,#07110d 75%);
     text-align:center;
     overflow-x:hidden;
 }
@@ -21,9 +21,9 @@ body::before{
     inset:0;
     pointer-events:none;
     background:
-        linear-gradient(90deg,rgba(255,215,90,.04) 1px,transparent 1px),
-        linear-gradient(rgba(255,215,90,.04) 1px,transparent 1px);
-    background-size:45px 45px;
+        linear-gradient(90deg,rgba(212,175,55,.05) 1px,transparent 1px),
+        linear-gradient(rgba(212,175,55,.05) 1px,transparent 1px);
+    background-size:48px 48px;
     opacity:.45;
 }
 
@@ -32,30 +32,25 @@ body::before{
     max-width:1200px;
     margin:35px auto;
     padding:35px;
-    background:rgba(0,0,0,.58);
+    background:rgba(0,0,0,.60);
     border:3px solid transparent;
     border-radius:18px;
-    animation:borderRGB 5s linear infinite;
-    box-shadow:
-        0 0 25px rgba(255,0,0,.35),
-        0 0 45px rgba(212,175,55,.25),
-        inset 0 0 30px rgba(212,175,55,.08);
+    animation:thematicRGB 6s linear infinite;
+    box-shadow:inset 0 0 35px rgba(212,175,55,.08);
 }
 
-@keyframes borderRGB{
-    0%{border-color:#ff3131;box-shadow:0 0 25px #ff3131;}
-    25%{border-color:#d4af37;box-shadow:0 0 25px #d4af37;}
-    50%{border-color:#1cff9a;box-shadow:0 0 25px #1cff9a;}
-    75%{border-color:#3aa0ff;box-shadow:0 0 25px #3aa0ff;}
-    100%{border-color:#ff3131;box-shadow:0 0 25px #ff3131;}
+@keyframes thematicRGB{
+    0%{border-color:#d4af37;box-shadow:0 0 24px #d4af37;}
+    35%{border-color:#b82d2d;box-shadow:0 0 24px #b82d2d;}
+    70%{border-color:#3aa0ff;box-shadow:0 0 24px #3aa0ff;}
+    100%{border-color:#d4af37;box-shadow:0 0 24px #d4af37;}
 }
 
 .hero{
     padding:25px;
-    border:1px solid rgba(212,175,55,.45);
+    border:1px solid rgba(212,175,55,.5);
     border-radius:14px;
-    background:linear-gradient(135deg,rgba(20,35,24,.85),rgba(0,0,0,.65));
-    box-shadow:inset 0 0 25px rgba(212,175,55,.12);
+    background:linear-gradient(135deg,rgba(15,35,25,.9),rgba(0,0,0,.7));
 }
 
 .seal{
@@ -70,10 +65,7 @@ body::before{
     font-size:56px;
     color:#ff3434;
     letter-spacing:6px;
-    text-shadow:
-        0 0 10px #ff3434,
-        0 0 25px #ff3434,
-        0 0 45px #700000;
+    text-shadow:0 0 10px #ff3434,0 0 30px #7a0000;
 }
 
 .subtitulo{
@@ -90,7 +82,7 @@ body::before{
 }
 
 .warning{
-    color:#ff5c5c;
+    color:#ff6969;
     text-shadow:0 0 8px #ff3131;
 }
 
@@ -99,26 +91,30 @@ body::before{
     height:5px;
     margin:35px 0;
     border-radius:20px;
-    background:linear-gradient(90deg,transparent,#ff3131,#d4af37,#1cff9a,#d4af37,#ff3131,transparent);
+    background:linear-gradient(90deg,transparent,#d4af37,#b82d2d,#3aa0ff,#d4af37,transparent);
     box-shadow:0 0 18px #d4af37;
 }
 
 .category h2,.shop-block h2{
-    font-size:32px;
-    color:#d4af37;
+    display:inline-block;
+    padding:12px 28px;
+    margin-bottom:25px;
+    color:#ffd76a;
+    font-size:30px;
     letter-spacing:3px;
+    border:2px solid #d4af37;
+    border-radius:12px;
+    background:rgba(0,0,0,.65);
     text-shadow:0 0 12px #d4af37;
-    margin-bottom:20px;
+    box-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
 .panel,.shop-block{
     padding:30px;
-    background:rgba(5,10,7,.75);
+    background:rgba(5,10,7,.78);
     border:2px solid rgba(212,175,55,.65);
     border-radius:16px;
-    box-shadow:
-        0 0 18px rgba(212,175,55,.35),
-        inset 0 0 25px rgba(255,255,255,.04);
+    box-shadow:0 0 20px rgba(212,175,55,.28), inset 0 0 25px rgba(255,255,255,.04);
 }
 
 .panel-text{
@@ -158,17 +154,17 @@ body::before{
 
 .product-card{
     padding:22px;
-    background:linear-gradient(145deg,rgba(20,30,20,.9),rgba(0,0,0,.85));
+    background:linear-gradient(145deg,rgba(20,30,20,.92),rgba(0,0,0,.88));
     border:2px solid rgba(212,175,55,.45);
     border-radius:14px;
-    box-shadow:0 0 18px rgba(212,175,55,.25);
+    box-shadow:0 0 18px rgba(212,175,55,.22);
     transition:.25s;
 }
 
 .product-card:hover{
     transform:translateY(-6px);
-    border-color:#ff3131;
-    box-shadow:0 0 25px rgba(255,49,49,.65);
+    border-color:#3aa0ff;
+    box-shadow:0 0 25px rgba(58,160,255,.55);
 }
 
 .product-card span{
