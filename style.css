@@ -199,6 +199,150 @@ footer{
     line-height:1.8;
 }
 
+/* RANGOS / EXPEDIENTE */
+
+.rank-header{
+    font-size:28px;
+    font-weight:bold;
+    color:#ffd86b;
+    text-shadow:0 0 12px #d4af37;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.rank-line{
+    height:2px;
+    background:linear-gradient(90deg,#d4af37,#b52d2d,#3aa0ff,#d4af37);
+    margin-bottom:18px;
+    box-shadow:0 0 12px #d4af37;
+}
+
+.rank-status{
+    margin:10px 0;
+    font-size:15px;
+    letter-spacing:1px;
+    color:#d6d6d6;
+}
+
+.status-green{
+    color:#32ff88;
+    text-shadow:0 0 10px #32ff88;
+}
+
+.status-gold{
+    color:#ffd86b;
+    text-shadow:0 0 10px #ffd86b;
+}
+
+.rank-list{
+    margin-top:15px;
+    text-align:left;
+    padding-left:20px;
+    line-height:1.8;
+    color:#ece4c3;
+}
+
+.rank-list li{
+    margin-bottom:6px;
+}
+
+/* COMPRAR */
+
+.checkout-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+    margin-top:30px;
+}
+
+.checkout-box{
+    padding:25px;
+    background:linear-gradient(145deg,rgba(10,22,16,.92),rgba(0,0,0,.88));
+    border:2px solid rgba(212,175,55,.5);
+    border-radius:16px;
+    box-shadow:0 0 18px rgba(212,175,55,.25);
+    text-align:left;
+}
+
+.checkout-box h3{
+    color:#ffd76a;
+    margin-bottom:18px;
+    text-shadow:0 0 10px #d4af37;
+}
+
+.checkout-box p{
+    color:#d9d0ad;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.order-line{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin:12px 0;
+    padding:10px;
+    border-bottom:1px solid rgba(212,175,55,.25);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    color:#ffd76a;
+    font-size:14px;
+}
+
+input,select{
+    width:100%;
+    padding:13px;
+    border-radius:8px;
+    border:1px solid rgba(212,175,55,.6);
+    background:#0d120f;
+    color:#fff;
+    outline:none;
+}
+
+input:focus,select:focus{
+    border-color:#3aa0ff;
+    box-shadow:0 0 12px rgba(58,160,255,.6);
+}
+
+.payment-methods{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.payment-methods span{
+    padding:8px 10px;
+    border-radius:8px;
+    background:rgba(212,175,55,.12);
+    border:1px solid rgba(212,175,55,.45);
+    color:#f1d06a;
+    font-size:13px;
+}
+
+.mini-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.finish-button{
+    width:100%;
+    margin-top:25px;
+    text-align:center;
+}
+
+.payment-note{
+    font-size:12px;
+    color:#aaa !important;
+    margin-top:18px;
+    text-align:center;
+}
+
 @media(max-width:768px){
     .hero h1{
         font-size:35px;
@@ -207,5 +351,9 @@ footer{
     .war-frame{
         width:96%;
         padding:20px;
+    }
+
+    .mini-grid{
+        grid-template-columns:1fr;
     }
 }
